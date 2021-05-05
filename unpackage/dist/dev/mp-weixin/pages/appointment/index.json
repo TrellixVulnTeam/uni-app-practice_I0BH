@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "TOD'S",
+  "usingComponents": {
+    "uni-icon": "/icons/uni-icons"
+  }
+}

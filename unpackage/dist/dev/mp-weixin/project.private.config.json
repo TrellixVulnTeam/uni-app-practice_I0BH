@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/appointment/index",
+          "pathName": "pages/appointment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/appointmentList/index",
+          "pathName": "pages/appointmentList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/appointDetail/index",
+          "pathName": "pages/appointDetail/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
