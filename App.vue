@@ -12,6 +12,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+	@import "/icons/iconfont.css"
 	/*每个页面公共css */
 </style>

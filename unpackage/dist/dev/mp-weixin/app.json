@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/appointment/index",
     "pages/appointmentList/index",
-    "pages/appointDetail/index"
+    "pages/appointDetail/index",
+    "pages/list"
   ],
   "subPackages": [],
   "window": {
@@ -12,5 +13,6 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

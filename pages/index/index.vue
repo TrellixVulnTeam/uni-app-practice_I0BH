@@ -6,6 +6,7 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<button @click="toAppointment">去预约</button>
+		<button @click="toList">去列表</button>
 	</view>
 </template>
 
@@ -30,6 +31,11 @@
 			toAppointment () {
 				uni.navigateTo({
 					url: '/pages/appointment/index'
+				})
+			},
+			toList () {
+				uni.navigateTo({
+					url: '/pages/list'
 				})
 			}
 		}

@@ -4,7 +4,7 @@ import request from '@/models/request.js'; // 引入封装好的request
 function getAllBookingList (data) {
 	return request({
 		method: "GET", // 请求方式
-		url: '/api/miniapp/getAllBookingList', // 请求url
+		url: '/getAllBookingList', // 请求url
 		data: data ,// 参数
 	})
 }
@@ -13,7 +13,7 @@ function getAllBookingList (data) {
 function getBooking (id) {
 	return request({
 		method: "GET", // 请求方式
-		url: `/api/miniapp/getBookingOrder/${id}`, // 请求url
+		url: `/getBookingOrder/${id}`, // 请求url
 	})
 }
 
@@ -21,7 +21,7 @@ function getBooking (id) {
 function serviceTime (id) {
 	return request({
 		method: "GET", // 请求方式
-		url: `/api/miniapp/serviceTime/${id}`, // 请求url
+		url: `/serviceTime/${id}`, // 请求url
 	})
 }
 
@@ -29,7 +29,7 @@ function serviceTime (id) {
 function postBooking (params) {
 	return request({
 		method: "POST", // 请求方式
-		url: `/api/miniapp/booking/${params.storeId}`, // 请求url
+		url: `/booking/${params.storeId}`, // 请求url
 		data: params
 	})
 }
@@ -38,7 +38,7 @@ function postBooking (params) {
 function getStoreInfo (id) {
 	return request({
 		method: "GET", // 请求方式
-		url: `/api/miniapp/getStoreInfo/${id}`, // 请求url
+		url: `/getStoreInfo/${id}`, // 请求url
 	})
 }
 
@@ -46,7 +46,7 @@ function getStoreInfo (id) {
 function cancelBookingOrder (id) {
 	return request({
 		method: "GET", // 请求方式
-		url: `/api/miniapp/cancelBookingOrder/${id}`, // 请求url
+		url: `/cancelBookingOrder/${id}`, // 请求url
 	})
 }
 
@@ -54,7 +54,7 @@ function cancelBookingOrder (id) {
 function getContact (id) {
 	return request({
 		method: "GET", // 请求方式
-		url: `/api/miniapp/get_contact_by_openid/${id}`, // 请求url
+		url: `/get_contact_by_openid/${id}`, // 请求url
 	})
 }
 
@@ -62,7 +62,7 @@ function getContact (id) {
 function decodePhone (data) {
 	return request({
 		method: 'POST',
-		url: '/api/miniapp/decrypt_data',
+		url: '/decrypt_data',
 		data: data
 	})
 }

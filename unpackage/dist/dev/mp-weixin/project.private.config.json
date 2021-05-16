@@ -29,6 +29,11 @@
           "pathName": "pages/appointDetail/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/list",
+          "pathName": "pages/list",
+          "scene": null
         }
       ]
     }

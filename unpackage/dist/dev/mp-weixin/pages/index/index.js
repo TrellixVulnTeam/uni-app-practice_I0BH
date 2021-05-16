@@ -147,6 +147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _api = _interopRequireDefault(__webpack_require__(/*! @/models/api.js */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -158,8 +159,8 @@ var _api = _interopRequireDefault(__webpack_require__(/*! @/models/api.js */ 17)
 //
 //
 //
-var _default = { data: function data() {return { title: 'Hello' };}, onLoad: function onLoad() {this.getData();}, methods: {
-    getData: function getData() {
+//
+var _default = { data: function data() {return { title: 'Hello' };}, onLoad: function onLoad() {this.getData();}, methods: { getData: function getData() {
       _api.default.getAllBookingList().then(function (data) {
         console.log(data);
       });
@@ -167,6 +168,11 @@ var _default = { data: function data() {return { title: 'Hello' };}, onLoad: fun
     toAppointment: function toAppointment() {
       uni.navigateTo({
         url: '/pages/appointment/index' });
+
+    },
+    toList: function toList() {
+      uni.navigateTo({
+        url: '/pages/list' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

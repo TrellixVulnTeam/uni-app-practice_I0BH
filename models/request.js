@@ -1,6 +1,11 @@
 const request = (config) => {
 	// 处理 apiUrl
-	config.url = 'https://qa.wechat.d1m.cn/api_wechat_tods' + config.url;
+	// #ifdef H5
+		config.url = '/api' + config.url
+	// #endif
+	// #ifdef MP-WEIXIN
+		config.url = 'https://qa.wechat.d1m.cn/api_wechat_tods/api/miniapp' + config.url;
+	// #endif
 	config.header = {
 		sessionId: '2g23VeoYggD2jFKIvD6a/HznM7zIwcJxMG8jYAhWjC4='
 	}

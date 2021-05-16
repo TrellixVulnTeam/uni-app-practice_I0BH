@@ -7,10 +7,9 @@
 				<picker mode="selector" :range="serviceList" range-key="serviceName" :value="typeIndex" @change="handleChange($event, 'typeIndex')">
 					<view class="Item">
 						<view class="Item-left">
-							<uni-icon type="user"></uni-icon>
-							<view>{{serviceList[typeIndex].serviceName}}</view>
+							<i class="iconfont icon-user"></i>
+							<view>{{serviceList[typeIndex] ? serviceList[typeIndex].serviceName : ''}}</view>
 						</view>
-						<uni-icon type="arrow-down"/>
 					</view>
 				</picker>
 			</view>
@@ -18,30 +17,30 @@
 				<picker mode="date" :value="date" :start="startDate" class="picker Row" @change="handleChange($event, 'date')">
 					<view class="Item">
 						<view class="Item-left">
-							<uni-icon type="calendar"></uni-icon>
+							<i class="iconfont icon-calendar"></i>
 							<view class="uni-input">{{date}}</view>
 						</view>
-						<uni-icon type="arrow-down"/>
+						<i class="iconfont icon-arrow-down"></i>
 					</view>
 				</picker>
 				<picker mode="selector" :value="time" :range=timeList class="picker Row" @change="handleChange($event, 'time')">
 					<view class="Item">
 						<view class="Item-left">
-							<uni-icon type="user"></uni-icon>
+							<i class="iconfont icon-clock"></i>
 							<view>{{timeList[time]}}</view>
 						</view>
-						<uni-icon type="arrow-down"/>
+						<i class="iconfont icon-arrow-down"></i>
 					</view>
 				</picker>
 			</view>
 			<!-- 姓名 -->
 			<view class="time">
 				<view :class="['Row', {'error': errorKey['surname']}]">
-					<uni-icon type="user"></uni-icon>
+					<i class="iconfont icon-user"></i>
 					<input :value=surname placeholder="姓" @input="getInput($event, 'surname')"/>
 				</view>
 				<view :class="['Row', 'name', {'error': errorKey['firstname']}]">
-					<uni-icon type="user"></uni-icon>
+					<i class="iconfont icon-user"></i>
 					<input :value=firstname placeholder="名" @input="getInput($event, 'firstname')"/>
 				</view>
 			</view>
@@ -50,24 +49,24 @@
 				<picker mode="selector" :range="genderList" :value="gender" @change="handleChange($event, 'gender')">
 					<view class="Item">
 						<view class="Item-left">
-							<uni-icon type="gender"></uni-icon>
+							<i class="iconfont icon-gender"></i>
 							<view>{{genderList[gender]}}</view>
 						</view>
-						<uni-icon type="arrow-down"/>
+						<i class="iconfont icon-arrow-down"></i>
 					</view>
 				</picker>
 			</view>
 			<!-- 手机号 -->
 			<view :class="['Row','phone', {'error': errorKey['mobile']}]">
 				<view class="Item-left">
-					<uni-icon type="phone"></uni-icon>
+					<i class="iconfont icon-arrow-down"></i>
 					<text v-if="mobile">{{mobile}}</text>
 				</view>
 				<button v-if=!mobile class="ClearStyle" open-type="getPhoneNumber" lang="zh_CN" @getphonenumber="getMobile">授权微信手机号</button>
 			</view>
 			<!-- 备注 -->
 			<view class="des">
-				<uni-icon type="comment"></uni-icon>
+				<i class="iconfont icon-msg"></i>
 				备注
 			</view>
 			<view class="Row">
@@ -92,11 +91,10 @@
 
 <script>
 	import api from '@/models/api.js'
-	import uniIcon from '@/icons/uni-icons.vue'
 	import { format } from '@/utils/index.js'
 	
 	export default {
-		components: {uniIcon},
+		components: {},
 		data () {
 			return {
 				serviceList: [],
@@ -252,7 +250,7 @@
 		margin: 0 auto;
 		overflow: auto;
 		
-		uni-icon {
+		i {
 			margin-right: 10rpx;
 		}
 	}

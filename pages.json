@@ -23,6 +23,12 @@
 			"style": {
 				"navigationBarTitleText": "TOD'S"
 			}
+		},
+		{
+			"path": "pages/list",
+			"style": {
+				"navigationBarTitleText": "TOD'S"
+			}
 		}
     ],
 	"globalStyle": {

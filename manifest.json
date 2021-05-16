@@ -67,6 +67,22 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
+	// h5端跨域配置
+	"h5": {
+		"devServer": {
+			"disableHostCheck": true,
+			"proxy": {
+				"/api": {
+					"target": "https://qa.wechat.d1m.cn/api_wechat_tods",
+					"changeOrigin": true,
+					"secure": false,
+					"pathRewrite": {
+							"^/api": ""
+					}
+				}
+			}
+		}
+	},
     "uniStatistics" : {
         "enable" : false
     }

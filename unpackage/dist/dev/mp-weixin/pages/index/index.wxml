@@ -1,1 +1,1 @@
-<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view><button data-event-opts="{{[['tap',[['toAppointment',['$event']]]]]}}" bindtap="__e">去预约</button></view>
+<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view><button data-event-opts="{{[['tap',[['toAppointment',['$event']]]]]}}" bindtap="__e">去预约</button><button data-event-opts="{{[['tap',[['toList',['$event']]]]]}}" bindtap="__e">去列表</button></view>
